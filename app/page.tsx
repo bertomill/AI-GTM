@@ -2405,34 +2405,326 @@ function MainApp() {
           ))}
         </Tabs.Root>
 
-        {/* Action Items */}
+        {/* Comprehensive Action Items */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
           className="mt-8 glass-effect rounded-xl p-6"
         >
-          <h3 className="text-xl font-bold text-white mb-4">Immediate Next Steps</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="p-4 bg-blue-600/20 rounded-lg">
-              <h4 className="font-semibold text-white mb-2">Week 1-2</h4>
-              <p className="text-blue-200 text-sm">
-                Identify and onboard 10 champion users across different tax departments
-              </p>
-            </div>
-            <div className="p-4 bg-purple-600/20 rounded-lg">
-              <h4 className="font-semibold text-white mb-2">Week 3-4</h4>
-              <p className="text-purple-200 text-sm">
-                Launch structured training program and establish feedback channels
-              </p>
-            </div>
-            <div className="p-4 bg-green-600/20 rounded-lg">
-              <h4 className="font-semibold text-white mb-2">Week 5-8</h4>
-              <p className="text-green-200 text-sm">
-                Measure initial adoption metrics and refine approach based on data
-              </p>
-            </div>
-          </div>
+          <h3 className="text-xl font-bold text-white mb-6">Comprehensive Implementation Roadmap</h3>
+          <p className="text-blue-200 text-sm mb-6">Detailed next steps with specific deliverables, timelines, and success criteria</p>
+          
+          <Accordion.Root type="multiple" className="space-y-4">
+            {/* Week 1-2: Champion Identification & Selection */}
+            <Accordion.Item value="week1-2" className="bg-blue-600/10 rounded-lg border border-blue-500/30 overflow-hidden">
+              <Accordion.Trigger className="flex items-center justify-between w-full p-4 text-left hover:bg-blue-600/20 transition-colors group">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-1">Week 1-2: Champion Identification & Selection</h4>
+                  <p className="text-blue-200 text-sm">Identify and onboard 8-10 champion users across different tax departments</p>
+                </div>
+                <ChevronDown className="w-5 h-5 text-blue-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              </Accordion.Trigger>
+              <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                <div className="p-4 pt-0">
+                  <Accordion.Root type="multiple" className="space-y-3">
+                    
+                    {/* Data Analysis & Candidate Identification */}
+                    <Accordion.Item value="week1-2-analysis" className="bg-white/5 rounded-lg border border-white/10">
+                      <Accordion.Trigger className="flex items-center justify-between w-full p-3 text-left hover:bg-white/5 transition-colors group">
+                        <h5 className="text-md font-medium text-white">Week 1: Data Analysis & Candidate Identification</h5>
+                        <ChevronDown className="w-4 h-4 text-blue-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </Accordion.Trigger>
+                      <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                        <div className="p-3 pt-0 space-y-3">
+                          <div className="p-3 bg-cyan-600/20 rounded-lg border border-cyan-500/30">
+                            <h6 className="text-white font-medium mb-2">Performance Analytics Review</h6>
+                            <ul className="text-cyan-100 text-sm space-y-1">
+                              <li>• Extract pilot group usage data and engagement metrics</li>
+                              <li>• Identify top 20% performers by efficiency gains and feature utilization</li>
+                              <li>• Map high performers to department coverage (Corporate, Individual, International, State & Local)</li>
+                              <li>• Document specific use cases and success patterns for each candidate</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-green-600/20 rounded-lg border border-green-500/30">
+                            <h6 className="text-white font-medium mb-2">Peer Nomination Survey</h6>
+                            <ul className="text-green-100 text-sm space-y-1">
+                              <li>• Deploy anonymous survey: "Who do you go to for help with new processes?"</li>
+                              <li>• Target 50+ tax professionals across all departments</li>
+                              <li>• Include questions about technology comfort and teaching ability</li>
+                              <li>• Cross-reference nominations with pilot performance data</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-purple-600/20 rounded-lg border border-purple-500/30">
+                            <h6 className="text-white font-medium mb-2">Manager Recommendations</h6>
+                            <ul className="text-purple-100 text-sm space-y-1">
+                              <li>• Schedule 15-minute calls with each department head</li>
+                              <li>• Request 2-3 influencer recommendations per department</li>
+                              <li>• Assess manager willingness to support champion time investment</li>
+                              <li>• Identify potential resistance points and mitigation strategies</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </Accordion.Content>
+                    </Accordion.Item>
+
+                    {/* Champion Outreach & Onboarding */}
+                    <Accordion.Item value="week1-2-outreach" className="bg-white/5 rounded-lg border border-white/10">
+                      <Accordion.Trigger className="flex items-center justify-between w-full p-3 text-left hover:bg-white/5 transition-colors group">
+                        <h5 className="text-md font-medium text-white">Week 2: Champion Outreach & Onboarding</h5>
+                        <ChevronDown className="w-4 h-4 text-blue-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </Accordion.Trigger>
+                      <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                        <div className="p-3 pt-0 space-y-3">
+                          <div className="p-3 bg-indigo-600/20 rounded-lg border border-indigo-500/30">
+                            <h6 className="text-white font-medium mb-2">Personalized Outreach Campaign</h6>
+                            <ul className="text-indigo-100 text-sm space-y-1">
+                              <li>• Send Practice Lead emails positioning as leadership development opportunity</li>
+                              <li>• Include champion program benefits: LinkedIn designation, executive visibility</li>
+                              <li>• Schedule 15-minute discovery calls to assess interest and availability</li>
+                              <li>• Prepare champion role description and time commitment expectations</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-yellow-600/20 rounded-lg border border-yellow-500/30">
+                            <h6 className="text-white font-medium mb-2">Infrastructure Setup</h6>
+                            <ul className="text-yellow-100 text-sm space-y-1">
+                              <li>• Create dedicated Slack/Teams champion workspace</li>
+                              <li>• Set up SharePoint resource library with training materials</li>
+                              <li>• Configure calendar scheduling for weekly office hours</li>
+                              <li>• Prepare LinkedIn "AI Champion" badge graphics and profiles</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-emerald-600/20 rounded-lg border border-emerald-500/30">
+                            <h6 className="text-white font-medium mb-2">Success Criteria & Deliverables</h6>
+                            <ul className="text-emerald-100 text-sm space-y-1">
+                              <li>• Confirm 8-10 champions with signed participation agreements</li>
+                              <li>• Achieve representation across all four tax specialties</li>
+                              <li>• Complete champion onboarding documentation</li>
+                              <li>• Schedule Week 3 intensive training session for all champions</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </Accordion.Content>
+                    </Accordion.Item>
+                  </Accordion.Root>
+                </div>
+              </Accordion.Content>
+            </Accordion.Item>
+
+            {/* Week 3-4: Training Program Launch */}
+            <Accordion.Item value="week3-4" className="bg-purple-600/10 rounded-lg border border-purple-500/30 overflow-hidden">
+              <Accordion.Trigger className="flex items-center justify-between w-full p-4 text-left hover:bg-purple-600/20 transition-colors group">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-1">Week 3-4: Training Program Launch</h4>
+                  <p className="text-purple-200 text-sm">Launch structured training program and establish feedback channels</p>
+                </div>
+                <ChevronDown className="w-5 h-5 text-purple-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              </Accordion.Trigger>
+              <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                <div className="p-4 pt-0">
+                  <Accordion.Root type="multiple" className="space-y-3">
+                    
+                    {/* Champion Training Intensive */}
+                    <Accordion.Item value="week3-4-training" className="bg-white/5 rounded-lg border border-white/10">
+                      <Accordion.Trigger className="flex items-center justify-between w-full p-3 text-left hover:bg-white/5 transition-colors group">
+                        <h5 className="text-md font-medium text-white">Week 3: Champion Training Intensive</h5>
+                        <ChevronDown className="w-4 h-4 text-purple-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </Accordion.Trigger>
+                      <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                        <div className="p-3 pt-0 space-y-3">
+                          <div className="p-3 bg-blue-600/20 rounded-lg border border-blue-500/30">
+                            <h6 className="text-white font-medium mb-2">3-Hour Training Session</h6>
+                            <ul className="text-blue-100 text-sm space-y-1">
+                              <li>• Hour 1: AI tool mastery - advanced features and best practices</li>
+                              <li>• Hour 2: Teaching methodology - how to train and mentor colleagues</li>
+                              <li>• Hour 3: Change management - addressing resistance and skepticism</li>
+                              <li>• Record session for reference and future champion onboarding</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-orange-600/20 rounded-lg border border-orange-500/30">
+                            <h6 className="text-white font-medium mb-2">Hands-On Practice & Certification</h6>
+                            <ul className="text-orange-100 text-sm space-y-1">
+                              <li>• Live practice session with real anonymized tax contracts</li>
+                              <li>• Individual coaching on advanced techniques and edge cases</li>
+                              <li>• Champion certification assessment and badge award</li>
+                              <li>• Role-play sessions for handling common user objections</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </Accordion.Content>
+                    </Accordion.Item>
+
+                    {/* Feedback Systems Implementation */}
+                    <Accordion.Item value="week3-4-feedback" className="bg-white/5 rounded-lg border border-white/10">
+                      <Accordion.Trigger className="flex items-center justify-between w-full p-3 text-left hover:bg-white/5 transition-colors group">
+                        <h5 className="text-md font-medium text-white">Week 4: Feedback Systems & Communication Channels</h5>
+                        <ChevronDown className="w-4 h-4 text-purple-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </Accordion.Trigger>
+                      <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                        <div className="p-3 pt-0 space-y-3">
+                          <div className="p-3 bg-teal-600/20 rounded-lg border border-teal-500/30">
+                            <h6 className="text-white font-medium mb-2">Multi-Channel Feedback Collection</h6>
+                            <ul className="text-teal-100 text-sm space-y-1">
+                              <li>• Weekly pulse surveys via Qualtrics (2-3 minute completion)</li>
+                              <li>• Champion office hours: 2 hours weekly per champion</li>
+                              <li>• Anonymous suggestion box for sensitive feedback</li>
+                              <li>• Integration with existing project management tools for real-time data</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-pink-600/20 rounded-lg border border-pink-500/30">
+                            <h6 className="text-white font-medium mb-2">Communication Infrastructure</h6>
+                            <ul className="text-pink-100 text-sm space-y-1">
+                              <li>• Launch weekly "AI Success Stories" email newsletter</li>
+                              <li>• Create department-specific discussion threads</li>
+                              <li>• Set up escalation protocols for technical and process issues</li>
+                              <li>• Establish monthly town halls with leadership participation</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-indigo-600/20 rounded-lg border border-indigo-500/30">
+                            <h6 className="text-white font-medium mb-2">Success Criteria & Deliverables</h6>
+                            <ul className="text-indigo-100 text-sm space-y-1">
+                              <li>• 100% champion completion of certification training</li>
+                              <li>• Feedback collection systems operational and tested</li>
+                              <li>• Champion office hours scheduled and publicized</li>
+                              <li>• Baseline metrics established for subsequent measurement</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </Accordion.Content>
+                    </Accordion.Item>
+                  </Accordion.Root>
+                </div>
+              </Accordion.Content>
+            </Accordion.Item>
+
+            {/* Week 5-8: Pilot Implementation & Metrics */}
+            <Accordion.Item value="week5-8" className="bg-green-600/10 rounded-lg border border-green-500/30 overflow-hidden">
+              <Accordion.Trigger className="flex items-center justify-between w-full p-4 text-left hover:bg-green-600/20 transition-colors group">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-1">Week 5-8: Pilot Implementation & Measurement</h4>
+                  <p className="text-green-200 text-sm">Launch department pilots, measure adoption metrics, and refine approach based on data</p>
+                </div>
+                <ChevronDown className="w-5 h-5 text-green-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              </Accordion.Trigger>
+              <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                <div className="p-4 pt-0">
+                  <Accordion.Root type="multiple" className="space-y-3">
+                    
+                    {/* Department Pilot Launch */}
+                    <Accordion.Item value="week5-8-pilots" className="bg-white/5 rounded-lg border border-white/10">
+                      <Accordion.Trigger className="flex items-center justify-between w-full p-3 text-left hover:bg-white/5 transition-colors group">
+                        <h5 className="text-md font-medium text-white">Week 5-6: Department Pilot Launch</h5>
+                        <ChevronDown className="w-4 h-4 text-green-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </Accordion.Trigger>
+                      <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                        <div className="p-3 pt-0 space-y-3">
+                          <div className="p-3 bg-cyan-600/20 rounded-lg border border-cyan-500/30">
+                            <h6 className="text-white font-medium mb-2">Team Formation & Training</h6>
+                            <ul className="text-cyan-100 text-sm space-y-1">
+                              <li>• Each champion selects 3-4 colleagues from their department</li>
+                              <li>• Target mix: 1-2 senior staff, 1-2 junior professionals per team</li>
+                              <li>• Champion-led training sessions (2 hours per team)</li>
+                              <li>• Establish team goals: 80% contract processing with AI assistance</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-amber-600/20 rounded-lg border border-amber-500/30">
+                            <h6 className="text-white font-medium mb-2">Daily Implementation & Support</h6>
+                            <ul className="text-amber-100 text-sm space-y-1">
+                              <li>• Daily AI tool usage with structured feedback capture</li>
+                              <li>• Weekly 30-minute team check-ins for troubleshooting</li>
+                              <li>• Real-time support via champion network and technical escalation</li>
+                              <li>• Document specific use cases and efficiency improvements</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </Accordion.Content>
+                    </Accordion.Item>
+
+                    {/* Metrics Collection & Analysis */}
+                    <Accordion.Item value="week5-8-metrics" className="bg-white/5 rounded-lg border border-white/10">
+                      <Accordion.Trigger className="flex items-center justify-between w-full p-3 text-left hover:bg-white/5 transition-colors group">
+                        <h5 className="text-md font-medium text-white">Week 7-8: Data Collection & Strategic Refinement</h5>
+                        <ChevronDown className="w-4 h-4 text-green-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </Accordion.Trigger>
+                      <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                        <div className="p-3 pt-0 space-y-3">
+                          <div className="p-3 bg-violet-600/20 rounded-lg border border-violet-500/30">
+                            <h6 className="text-white font-medium mb-2">Comprehensive Metrics Analysis</h6>
+                            <ul className="text-violet-100 text-sm space-y-1">
+                              <li>• Usage frequency: Target 80% of eligible contracts processed</li>
+                              <li>• Time savings: Before/after comparison for similar contract types</li>
+                              <li>• Quality metrics: Error rate tracking and client satisfaction scores</li>
+                              <li>• User satisfaction: Weekly pulse checks and comprehensive surveys</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-rose-600/20 rounded-lg border border-rose-500/30">
+                            <h6 className="text-white font-medium mb-2">Strategy Refinement & Optimization</h6>
+                            <ul className="text-rose-100 text-sm space-y-1">
+                              <li>• Identify top-performing teams and replicate success patterns</li>
+                              <li>• Address common barriers and resistance points</li>
+                              <li>• Refine training curriculum based on user feedback</li>
+                              <li>• Update champion support materials and escalation processes</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 bg-emerald-600/20 rounded-lg border border-emerald-500/30">
+                            <h6 className="text-white font-medium mb-2">Phase 2 Preparation & Scaling</h6>
+                            <ul className="text-emerald-100 text-sm space-y-1">
+                              <li>• Document best practices and success stories for broader rollout</li>
+                              <li>• Plan cohort-based deployment strategy for remaining departments</li>
+                              <li>• Prepare executive presentation with pilot results and ROI data</li>
+                              <li>• Secure budget and resource approval for full-scale implementation</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </Accordion.Content>
+                    </Accordion.Item>
+                  </Accordion.Root>
+                </div>
+              </Accordion.Content>
+            </Accordion.Item>
+
+            {/* Risk Mitigation & Contingency Planning */}
+            <Accordion.Item value="risk-mitigation" className="bg-yellow-600/10 rounded-lg border border-yellow-500/30 overflow-hidden">
+              <Accordion.Trigger className="flex items-center justify-between w-full p-4 text-left hover:bg-yellow-600/20 transition-colors group">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-1">Risk Mitigation & Contingency Planning</h4>
+                  <p className="text-yellow-200 text-sm">Proactive risk management and contingency strategies for common implementation challenges</p>
+                </div>
+                <ChevronDown className="w-5 h-5 text-yellow-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              </Accordion.Trigger>
+              <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                <div className="p-4 pt-0 space-y-3">
+                  <div className="p-3 bg-red-600/20 rounded-lg border border-red-500/30">
+                    <h6 className="text-white font-medium mb-2">Low Champion Recruitment (&lt; 8 participants)</h6>
+                    <ul className="text-red-100 text-sm space-y-1">
+                      <li>• Escalate to Practice Lead for direct manager intervention</li>
+                      <li>• Offer additional incentives: professional development credits, conference attendance</li>
+                      <li>• Consider external champion recruitment from other KPMG offices</li>
+                      <li>• Reduce scope to 6 champions with broader department coverage</li>
+                    </ul>
+                  </div>
+                  <div className="p-3 bg-orange-600/20 rounded-lg border border-orange-500/30">
+                    <h6 className="text-white font-medium mb-2">Pilot Team Resistance (&lt; 60% engagement)</h6>
+                    <ul className="text-orange-100 text-sm space-y-1">
+                      <li>• Implement mandatory training approach with manager enforcement</li>
+                      <li>• Provide additional one-on-one coaching for struggling users</li>
+                      <li>• Showcase early wins and success stories from engaged teams</li>
+                      <li>• Adjust workload expectations and provide billable hour relief</li>
+                    </ul>
+                  </div>
+                  <div className="p-3 bg-amber-600/20 rounded-lg border border-amber-500/30">
+                    <h6 className="text-white font-medium mb-2">Technical Issues & Tool Limitations</h6>
+                    <ul className="text-amber-100 text-sm space-y-1">
+                      <li>• Establish direct vendor escalation channel with guaranteed response times</li>
+                      <li>• Create workaround documentation for known limitations</li>
+                      <li>• Develop hybrid manual-AI workflows for complex edge cases</li>
+                      <li>• Maintain legacy process capability for critical client deadlines</li>
+                    </ul>
+                  </div>
+                </div>
+              </Accordion.Content>
+            </Accordion.Item>
+          </Accordion.Root>
         </motion.div>
       </main>
 
