@@ -613,16 +613,31 @@ function PasswordProtection({ children }: { children: React.ReactNode }) {
   }, [])
 
   // Handle login form submission
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
-    const correctPassword = 'AIGTM2025'
     
-    if (password === correctPassword) {
-      setIsAuthenticated(true)
-      localStorage.setItem('aigtm-authenticated', 'true')
-      setError('')
-    } else {
-      setError('Incorrect password. Please try again.')
+    try {
+      // Check password via API route for security
+      const response = await fetch('/api/auth', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ password }),
+      })
+      
+      const data = await response.json()
+      
+      if (data.success) {
+        setIsAuthenticated(true)
+        localStorage.setItem('aigtm-authenticated', 'true')
+        setError('')
+      } else {
+        setError('Incorrect password. Please try again.')
+        setPassword('')
+      }
+    } catch (error) {
+      setError('Authentication error. Please try again.')
       setPassword('')
     }
   }

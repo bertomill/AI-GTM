@@ -25,8 +25,14 @@ A comprehensive AI adoption strategy presentation built with Next.js, featuring 
 Required environment variables:
 
 ```env
+# OpenAI API Configuration
 OPENAI_API_KEY=your-openai-api-key-here
+
+# Application Security
+APP_PASSWORD=AIGTM2025
 ```
+
+**Security Note**: The APP_PASSWORD controls access to the presentation. Change this to a secure password for production use.
 
 ## Getting Started
 
