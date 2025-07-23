@@ -14,7 +14,7 @@ function AIAgent() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: 'Hi! I\'m Robert Mill\'s AI agent, enhanced with comprehensive data from this presentation. I can provide detailed answers about the 4-phase rollout strategy, specific platform implementations, CIBC experience scaling from 300 to 15,000 users, stakeholder engagement tactics, success metrics, and much more. What aspect of the AI adoption strategy would you like to explore?'
+      content: 'Hi! I\'m Robert Mill\'s AI assistant, here to share his expertise on AI adoption strategy. I can provide detailed answers about Robert\'s 4-phase rollout methodology, his CIBC experience scaling from 300 to 15,000 users, specific platform implementations, stakeholder engagement tactics, success metrics, and much more. What aspect of Robert\'s proven AI adoption strategy would you like to explore?'
     }
   ])
   const [currentMessage, setCurrentMessage] = useState('')
@@ -2383,7 +2383,7 @@ function MainApp() {
                   /* Other Strategy Content */
                   <>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {step.insights?.map((insight, index) => (
+                      {(step as any).insights?.map((insight: string, index: number) => (
                         <motion.div
                           key={index}
                           initial={{ opacity: 0, x: -20 }}
